@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Stock</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hero-bg {
+        background-image: url("images/hero1.avif");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="bg-gray-400 text-black">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <!-- <img class="text-lg font-bold">Job Stock</> -->
+          <img class="w-[200px] h-[50px]" src="./images/logo.webp" alt="" />
+
+          <!-- Menu Links -->
+          <div class="hidden md:flex space-x-6">
+            <a href="#" class="hover:text-blue-700">Home</a>
+            <a href="#" class="hover:text-blue-700">For Employee</a>
+            <a href="#" class="hover:text-blue-700">For Candidate</a>
+            <a href="#" class="hover:text-blue-700">Help</a>
+            <a href="#" class="hover:text-blue-700">Contact</a>
+          </div>
+
+          <!-- Buttons -->
+          <div class="hidden md:flex space-x-4">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Sign In
+            </button>
+            <button
+              class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Upload Resume
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-white focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a
+          href="#"
+          class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700"
+          >For Employee</a
+        >
+        <a
+          href="#"
+          class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700"
+          >For Candidate</a
+        >
+        <a
+          href="#"
+          class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700"
+          >Help</a
+        >
+        <a
+          href="#"
+          class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700"
+          >Contact</a
+        >
+        <a
+          href="#"
+          class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700"
+          >Sign In</a
+        >
+        <a
+          href="#"
+          class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700"
+          >Upload Resume</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex flex-col justify-center text-white">
+      <div class="container mx-auto px-4 md:px-8 lg:px-12">
+        <div class="md:w-1/2">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 text-blue-500">
+            <span class="text-green-500 font-bold">Find</span> Great Job
+            Opportunity You Deserve
+          </h1>
+          <div class="bg-white bg-opacity-20 rounded p-4 mb-6">
+            <input
+              type="text"
+              placeholder="Job Title or Keywords"
+              class="p-3 rounded w-full mb-4"
+            />
+            <input
+              type="text"
+              placeholder="Location"
+              class="p-3 rounded w-full mb-4"
+            />
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+            >
+              Search
+            </button>
+          </div>
+          <div
+            class="flex flex-col md:flex-row md:items-center mt-6 space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <div class="flex items-center space-x-2">
+              <span class="text-yellow-400">★★★★☆</span>
+              <span>4.5 (2000+ reviews)</span>
+            </div>
+            <div class="text-sm md:text-base">
+              <span class="font-semibold">5000+</span> Jobs Listed
+            </div>
+            <div class="text-sm md:text-base">
+              <span class="font-semibold">1000+</span> Companies
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Jobs Section -->
+    <section class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4 text-center">Featured Jobs</h2>
+        <p class="text-center mb-12">
+          Job Stock is a leading job portal providing thousands <br />
+          of job opportunities from top companies. Find the job that you deserve
+          today!
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center border border-green-500"
+          >
+            <div class="flex items-center justify-between mb-4 w-full">
+              <span
+                class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Featured</span
+              >
+              <span
+                class="bg-red-200 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Urgent</span
+              >
+              <span
+                class="bg-green-200 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Enternship</span
+              >
+            </div>
+            <img
+              src="./images/j1.webp"
+              alt="Job Image"
+              class="w-full h-32 object-cover rounded mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-center">
+              Jr. PHP Developer
+            </h3>
+            <p class="text-gray-600 mb-2 text-center">
+              CSS3, HTML5, Javascript, Bootstrap, Jquery
+            </p>
+            <div class="text-center">
+              <p
+                class="text-gray-800 font-bold mx-10 text-center text-orange-500"
+              >
+                $5K - $8K
+              </p>
+              <button class="bg-green-500 p-2 rounded-md text-white">
+                6 Open
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center border border-green-500"
+          >
+            <div class="flex items-center justify-between mb-4 w-full">
+              <span
+                class="bg-red-200 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Urgent</span
+              >
+              <span
+                class="bg-yellow-200 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Freelancer</span
+              >
+            </div>
+            <img
+              src="./images/j2.webp"
+              alt="Job Image"
+              class="w-full h-32 object-cover rounded mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-center">
+              Exp. Project Manager
+            </h3>
+            <p class="text-gray-600 mb-2 text-center">
+              CSS3, HTML5, Javascript, Bootstrap, Jquery
+            </p>
+            <div class="text-center">
+              <p
+                class="text-gray-800 font-bold mx-10 text-center text-orange-500"
+              >
+                $10K - $15K
+              </p>
+              <button class="bg-green-500 p-2 rounded-md text-white">
+                2 Open
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center border border-green-500"
+          >
+            <div class="flex items-center justify-between mb-4 w-full">
+              <span
+                class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Featured</span
+              >
+              <span
+                class="bg-red-200 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Urgent</span
+              >
+              <span
+                class="bg-yellow-200 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Part Time</span
+              >
+            </div>
+            <img
+              src="./images/j3.webp"
+              alt="Job Image"
+              class="w-full h-32 object-cover rounded mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-center">
+              Sr. WordPress Developer
+            </h3>
+            <p class="text-gray-600 mb-2 text-center">
+              CSS3, HTML5, Javascript, Bootstrap, Jquery
+            </p>
+            <div class="text-center">
+              <p
+                class="text-gray-800 font-bold mx-10 text-center text-orange-500"
+              >
+                $18K - $24K
+              </p>
+              <button class="bg-green-500 p-2 rounded-md text-white">
+                10 Open
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center border border-green-500"
+          >
+            <div class="flex items-center justify-between mb-4 w-full">
+              <span
+                class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Featured</span
+              >
+              <span
+                class="bg-green-200 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Full Time</span
+              >
+            </div>
+            <img
+              src="./images/j4.webp"
+              alt="Job Image"
+              class="w-full h-32 object-cover rounded mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-center">
+              Jr. Laravel Developer
+            </h3>
+            <p class="text-gray-600 mb-2 text-center">
+              CSS3, HTML5, Javascript, Bootstrap, Jquery
+            </p>
+            <div class="text-center">
+              <p
+                class="text-gray-800 font-bold mx-10 text-center text-orange-500"
+              >
+                $5K - $8K
+              </p>
+              <button class="bg-green-500 p-2 rounded-md text-white">
+                6 Open
+              </button>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center border border-green-500"
+          >
+            <div class="flex items-center justify-between mb-4 w-full">
+              <span
+                class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Featured</span
+              >
+              <span
+                class="bg-green-200 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Full Time</span
+              >
+            </div>
+            <img
+              src="https://source.unsplash.com/random/400x200?laravel"
+              alt="Job Image"
+              class="w-full h-32 object-cover rounded mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-center">
+              Jr. Laravel Developer
+            </h3>
+            <p class="text-gray-600 mb-2 text-center">
+              CSS3, HTML5, Javascript, Bootstrap, Jquery
+            </p>
+            <div class="text-center">
+              <p
+                class="text-gray-800 font-bold mx-10 text-center text-orange-500"
+              >
+                $15K - $18K
+              </p>
+              <button class="bg-green-500 p-2 rounded-md text-white">
+                2 Open
+              </button>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center border border-green-500"
+          >
+            <div class="flex items-center justify-between mb-4 w-full">
+              <span
+                class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Featured</span
+              >
+              <span
+                class="bg-green-200 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Full Time</span
+              >
+            </div>
+            <img
+              src="https://source.unsplash.com/random/400x200?laravel"
+              alt="Job Image"
+              class="w-full h-32 object-cover rounded mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-center">
+              Jr. Laravel Developer
+            </h3>
+            <p class="text-gray-600 mb-2 text-center">
+              CSS3, HTML5, Javascript, Bootstrap, Jquery
+            </p>
+            <div class="text-center">
+              <p
+                class="text-gray-800 font-bold mx-10 text-center text-orange-500"
+              >
+                $10K - $12K
+              </p>
+              <button class="bg-green-500 p-2 rounded-md text-white">
+                1 Open
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+          <!-- Card 5 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center border border-green-500"
+          >
+            <div class="flex items-center justify-between mb-4 w-full">
+              <span
+                class="bg-red-200 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Urgent</span
+              >
+              <span
+                class="bg-yellow-200 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Freelancer</span
+              >
+            </div>
+            <img
+              src="https://source.unsplash.com/random/400x200?design"
+              alt="Job Image"
+              class="w-full h-32 object-cover rounded mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-center">
+              Sr. UI/UX Designer
+            </h3>
+            <p class="text-gray-600 mb-2 text-center">
+              CSS3, HTML5, Javascript, Bootstrap, Jquery
+            </p>
+            <div class="text-center">
+              <p
+                class="text-gray-800 font-bold mx-10 text-center text-orange-500"
+              >
+                $5K - $8K
+              </p>
+              <button class="bg-green-500 p-2 rounded-md text-white">
+                1 Open
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center border border-green-500"
+          >
+            <div class="flex items-center justify-between mb-4 w-full">
+              <span
+                class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Featured</span
+              >
+              <span
+                class="bg-red-200 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Urgent</span
+              >
+              <span
+                class="bg-yellow-200 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Part Time</span
+              >
+            </div>
+            <img
+              src="https://source.unsplash.com/random/400x200?code"
+              alt="Job Image"
+              class="w-full h-32 object-cover rounded mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-center">
+              Java & Python Developer
+            </h3>
+            <p class="text-gray-600 mb-2 text-center">
+              CSS3, HTML5, Javascript, Bootstrap, Jquery
+            </p>
+            <div class="text-center">
+              <p
+                class="text-gray-800 font-bold mx-10 text-center text-orange-500"
+              >
+                $50K - $80K
+              </p>
+              <button class="bg-green-500 p-2 rounded-md text-white">
+                3 Open
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center border border-green-500"
+          >
+            <div class="flex items-center justify-between mb-4 w-full">
+              <span
+                class="bg-red-200 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Urgent</span
+              >
+              <span
+                class="bg-green-200 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Full Time</span
+              >
+            </div>
+            <img
+              src="./images/j8.webp"
+              alt="Job Image"
+              class="w-full h-32 object-cover rounded mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-center">
+              Sr. Code Ignitor Developer
+            </h3>
+            <p class="text-gray-600 mb-2 text-center">
+              CSS3, HTML5, Javascript, Bootstrap, Jquery
+            </p>
+            <div class="text-center">
+              <p
+                class="text-gray-800 font-bold mx-10 text-center text-orange-500"
+              >
+                $5K - $8K
+              </p>
+              <button class="bg-green-500 p-2 rounded-md text-white">
+                4 Open
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center border border-green-500"
+          >
+            <div class="flex items-center justify-between mb-4 w-full">
+              <span
+                class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Featured</span
+              >
+              <span
+                class="bg-green-200 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Enternship</span
+              >
+            </div>
+            <img
+              src="https://source.unsplash.com/random/400x200?magento"
+              alt="Job Image"
+              class="w-full h-32 object-cover rounded mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-center">
+              Sr. Magento Developer
+            </h3>
+            <p class="text-gray-600 mb-2 text-center">
+              CSS3, HTML5, Javascript, Bootstrap, Jquery
+            </p>
+            <div class="text-center">
+              <p
+                class="text-gray-800 font-bold mx-10 text-center text-orange-500"
+              >
+                $5K - $8K
+              </p>
+              <button class="bg-green-500 p-2 rounded-md text-white">
+                12 Open
+              </button>
+            </div>
+          </div>
+          <!-- Card 8 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center border border-green-500"
+          >
+            <div class="flex items-center justify-between mb-4 w-full">
+              <span
+                class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Featured</span
+              >
+              <span
+                class="bg-green-200 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Enternship</span
+              >
+            </div>
+            <img
+              src="https://source.unsplash.com/random/400x200?magento"
+              alt="Job Image"
+              class="w-full h-32 object-cover rounded mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-center">
+              Sr. Magento Developer
+            </h3>
+            <p class="text-gray-600 mb-2 text-center">
+              CSS3, HTML5, Javascript, Bootstrap, Jquery
+            </p>
+            <div class="text-center">
+              <p
+                class="text-gray-800 font-bold mx-10 text-center text-orange-500"
+              >
+                $5K - $8K
+              </p>
+              <button class="bg-green-500 p-2 rounded-md text-white">
+                6 Open
+              </button>
+            </div>
+          </div>
+          <!-- Card 8 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center border border-green-500"
+          >
+            <div class="flex items-center justify-between mb-4 w-full">
+              <span
+                class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Featured</span
+              >
+              <span
+                class="bg-green-200 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                >Enternship</span
+              >
+            </div>
+            <img
+              src="./images/j8.webp"
+              alt="Job Image"
+              class="w-full h-32 object-cover rounded mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-center">
+              Sr. Magento Developer
+            </h3>
+            <p class="text-gray-600 mb-2 text-center">
+              CSS3, HTML5, Javascript, Bootstrap, Jquery
+            </p>
+            <div class="text-center">
+              <p
+                class="text-gray-800 font-bold mx-10 text-center text-orange-500"
+              >
+                $5K - $8K
+              </p>
+              <button class="bg-green-500 p-2 rounded-md text-white">
+                6 Open
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center my-4">
+        <button class="bg-green-500 px-4 py-2 rounded-md">See more</button>
+      </div>
+    </section>
+
+    <!-- Trusted & Popular Job Portal Section -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <!-- Image Column -->
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img
+            src="./images/advance.webp"
+            alt="Trusted & Popular Job Portal"
+            class="w-full h-auto rounded-lg shadow-md"
+          />
+        </div>
+
+        <!-- Content Column -->
+        <div class="md:w-1/2 md:pl-16">
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-bold mb-4">
+              Trusted & Popular Job Portal
+            </h2>
+            <p class="text-gray-700">
+              Discover why Job Stock is the preferred choice for job seekers and
+              employers alike.
+            </p>
+          </div>
+
+          <!-- Quality Job Section -->
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold mb-2">#1 Quality Job</h3>
+            <p class="text-gray-700">
+              Find top-quality job opportunities from leading companies.
+            </p>
+          </div>
+
+          <!-- Top Companies Section -->
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold mb-2">Top Companies</h3>
+            <p class="text-gray-700">
+              Connect with renowned companies offering exciting career
+              prospects.
+            </p>
+          </div>
+
+          <!-- International Jobs Section -->
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold mb-2">International Jobs</h3>
+            <p class="text-gray-700">
+              Explore job opportunities around the globe and take your career to
+              new heights.
+            </p>
+          </div>
+
+          <!-- No Extra Charges Section -->
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold mb-2">No Extra Charges</h3>
+            <p class="text-gray-700">
+              Enjoy our services with no hidden fees or extra charges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section start  -->
+    <footer>
+      <div class="bg-gray-900 pt-20 pb-20">
+        <div
+          class="w-4/5 pb-8 border-b-2 border-gray-300 border-opacity-50 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-start"
+        >
+          <div>
+            <div class="flex items-center space-x-2">
+              <h1 class="text-2xl font-bold text-white">
+                Job <span class="text-orange-500">Stock</span>
+              </h1>
+            </div>
+            <p class="text-white text-opacity-60 mt-2">
+              Elevate your experience with our premium services. We strive to
+              deliver excellence in every aspect of our work. Join us on a
+              journey of innovation and reliability, where your satisfaction is
+              our priority.
+            </p>
+            <p class="text-white mt-4">jobstock@gmail.com</p>
+            <p class="text-red-300 text-lg font-bold">+880-12345678</p>
+          </div>
+
+          <div class="text-gray-600">
+            <h1 class="text-2xl font-semibold mb-4 text-white">Products</h1>
+            <p class="mt-2 hover:text-yellow-300 transition-all cursor-pointer">
+              Colloborations
+            </p>
+            <p class="mt-2 hover:text-yellow-300 transition-all cursor-pointer">
+              TeamWork
+            </p>
+            <p class="mt-2 hover:text-yellow-300 transition-all cursor-pointer">
+              Remote
+            </p>
+            <p class="mt-2 hover:text-yellow-300 transition-all cursor-pointer">
+              OnSide
+            </p>
+            <p class="mt-2 hover:text-yellow-300 transition-all cursor-pointer">
+              Ovservations
+            </p>
+          </div>
+
+          <div class="text-gray-600">
+            <h1 class="text-2xl font-semibold mb-4 text-white">Quick Link</h1>
+            <p class="mt-2 hover:text-yellow-300 transition-all cursor-pointer">
+              Home
+            </p>
+            <p class="mt-2 hover:text-yellow-300 transition-all cursor-pointer">
+              About
+            </p>
+            <p class="mt-2 hover:text-yellow-300 transition-all cursor-pointer">
+              Menu
+            </p>
+            <p class="mt-2 hover:text-yellow-300 transition-all cursor-pointer">
+              Products
+            </p>
+            <p class="mt-2 hover:text-yellow-300 transition-all cursor-pointer">
+              NewsLetter
+            </p>
+          </div>
+
+          <div>
+            <h1 class="text-2xl font-semibold mb-4 text-white uppercase">
+              Opening Hours
+            </h1>
+            <p class="text-white text-lg">
+              Monday-Friday: <span class="text-yellow-300">10AM - 9PM</span>
+            </p>
+            <p class="text-white text-lg">
+              Saturday-Sunday: <span class="text-yellow-300">10AM - 7PM</span>
+            </p>
+            <div class="flex items-center space-x-6 mt-8">
+              <a
+                href="https://www.facebook.com/YourPage"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6 text-blue-500"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M12 22V12h3.5v-3.853H12V6.607c0-1.13.324-1.903 1.962-1.903H16V1.06C15.706 1.017 14.519 1 13.248 1 9.358 1 7.06 3.312 7.06 6.868V8.147H3.5v3.853H7.06V22h4.94z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com/YourPage"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6 text-blue-400"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M23.954 4.572c-.885.394-1.837.659-2.837.782 1.018-.611 1.798-1.573 2.165-2.722-.951.566-2.005.978-3.127 1.202-.896-.958-2.175-1.56-3.594-1.56-2.723 0-4.93 2.207-4.93 4.93 0 .386.044.76.127 1.122-4.095-.206-7.726-2.158-10.158-5.13-.424.725-.666 1.566-.666 2.465 0 1.707.87 3.215 2.188 4.097-.806-.025-1.563-.247-2.227-.616v.062c0 2.385 1.693 4.374 3.946 4.827-.413.112-.847.171-1.296.171-.317 0-.626-.03-.928-.089.626 1.953 2.445 3.375 4.602 3.415-1.686 1.323-3.807 2.108-6.106 2.108-.397 0-.79-.023-1.177-.069 2.175 1.394 4.752 2.21 7.53 2.21 9.036 0 13.98-7.496 13.98-13.979 0-.212-.004-.425-.014-.635.961-.696 1.798-1.567 2.454-2.559z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/YourChannel"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6 text-red-600"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M22.733 7.996s-.205-1.45-1.177-2.421c-1.08-1.08-2.217-1.086-2.423-1.126C17.9 4 12.007 4 12.007 4s-5.89 0-7.126.449c-.207.04-1.343.046-2.424 1.127-.972.97-1.178 2.42-1.178 2.42S1 9.164 1 11.3v1.4c0 2.14.205 3.302.205 3.302s.205 1.45 1.177 2.42c1.08 1.08 2.217 1.127 2.423 1.166C6.114 20 12.007 20 12.007 20s5.893 0 7.128-.448c.206-.04 1.342-.086 2.422-1.166.972-.97 1.177-2.42 1.177-2.42s.205-1.162.205-3.302v-1.4c0-2.14-.205-3.301-.205-3.301zM9.6 15.004V8.99l5.819 3.006-5.82 3.008z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 hover:text-yellow-500 text-center mt-4 text-lg">
+          copyright 2024 Job Stock. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- Footer section End  -->
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
